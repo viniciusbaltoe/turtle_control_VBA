@@ -28,6 +28,9 @@ class TurtleController_VBA(Node):
         self.x_goal = 5.54      # Posição objetivo
         self.y_goal = 5.54      # Posição objetivo
 
+        self.distance_threshold = 0.01
+        self.angle_threshold = 0.05
+
 
     def init_publisher(self):   # Inicializa os publishers
         self.velocity_publisher = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
@@ -50,12 +53,10 @@ class TurtleController_VBA(Node):
 
     def pub_callback(self):
         twist_msg = Twist()
-        distance_threshold = 0.01
-        angle_threshold = 0.05
 
-        if distancia_euclidiana(self.x, self.y, self.x_goal, self.y_goal) > distance_threshold:
+        if distancia_euclidiana(self.x, self.y, self.x_goal, self.y_goal) > self.distance_threshold:
             theta_goal = calcular_angulo_entre_pontos(self.x, self.y, self.x_goal, self.y_goal)
-            if abs(self.theta - theta_goal) > angle_threshold:
+            if abs(self.theta - theta_goal) > self.angle_threshold:
                 # Fase de rotação
                 theta_error = theta_goal - self.theta
 
