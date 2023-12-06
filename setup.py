@@ -28,7 +28,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'turtle_control = turtle_control_VBA.turtle_control:main'
+            'turtle_control = turtle_control_VBA.turtle_control:main',
+            'goal_manager = turtle_control_VBA.goal_manager:main'
         ],
     },
 )
