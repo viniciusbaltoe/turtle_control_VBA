@@ -58,5 +58,5 @@ ros2 launch turtle_control_VBA lab6_turtlesim_launch.py
 ```
 * Launch do Experimento 6 - TurtleBot/Gazebo:
 ```
-
+ros2 launch turtle_control_VBA lab6_gazebo_launch.py headless:=False
 ```

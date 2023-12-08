@@ -29,7 +29,9 @@ setup(
     entry_points={
         'console_scripts': [
             'turtle_control = turtle_control_VBA.turtle_control:main',
-            'goal_manager = turtle_control_VBA.goal_manager:main'
+            'goal_manager = turtle_control_VBA.goal_manager:main',
+            'turtlebot_control = turtle_control_VBA.turtlebot_control:main',
+            'turtlebot_goal_manager = turtle_control_VBA.turtlebot_goal_manager:main'
         ],
     },
 )
