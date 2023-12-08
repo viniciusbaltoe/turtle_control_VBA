@@ -1,4 +1,4 @@
-# ros_alvw_navigation
+# Turtle Control - Turtlesim and Turtlebot (gazebo).
 
 [![ROS2](https://img.shields.io/badge/ROS2-Humble-green)](https://docs.ros.org/en/humble/index.html)
 [![Python](https://img.shields.io/badge/Python-v3.7-blue)](https://www.python.org/)
